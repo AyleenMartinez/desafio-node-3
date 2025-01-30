@@ -29,7 +29,7 @@ app.post("/posts", async (req, res) => {
     await agregarPost(titulo, img, descripcion, likes);
     res.send("Post agregado con éxito");
   } catch (error) {
-    res.status(500).send("Error al agregar un post");
+    res.status(500).send(error);
   }
 });
 
